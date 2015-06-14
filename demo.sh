@@ -124,6 +124,10 @@ echo "All installed..."
     sudo cp /home/damo/crunchbang-configuration/config-bkp/pymodules/* /usr/lib/python3/dist-packages/
     echo "Done..."
     echo ""
+##Install Calibre
+    echo "Installing Calibre"
+    sudo -v && wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
+    echo "Done..."
 
 ###Stuff to remove ######################################
 ########### Add PROG to list if required ##################
